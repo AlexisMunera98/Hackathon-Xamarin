@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TechAndEdu"
+             x:Class="TechAndEdu.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ListaPropuestas" >
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+
+                            <TextCell Text="{Binding propuesta}" Detail="{Binding categoria}" ></TextCell>
+                            <!--<TextCell Text="{Binding categoria}"></TextCell>
+                            <TextCell Text="{Binding likes}"></TextCell>
+                        <TextCell Text="{Binding dislikes}"></TextCell>-->
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            
+            <Button Text="Agregar Propuesta" x:Name="AgregarComando" Clicked="AgregarComando_Clicked"></Button>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
